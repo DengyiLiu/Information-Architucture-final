@@ -6,19 +6,19 @@ This repository contains the code and resources for an advanced fraud detection 
 ## Detailed Overview
 
 The fraud detection system consists of the following key steps:
-
+![Workflow Diagram](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/Screen%20Shot%202023-05-11%20at%2011.45.03%20PM.png)
 1. **Neural Network Training:** A neural network model is trained using a comprehensive dataset of transactions, including both fraudulent and non-fraudulent activities. The training process involves using a suitable machine learning framework, such as TensorFlow or PyTorch, and optimizing the model for accuracy and efficiency. Once the model is trained and validated, it is saved and stored in an Amazon S3 bucket for easy access and future use.
-
+![Model Performance](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/Screen%20Shot%202023-05-11%20at%2011.51.55%20PM.png)
 2. **Data Collection:** To simulate real-world conditions, an AWS Lambda function is used to generate and collect transaction data from a fictitious website. This Lambda function is responsible for creating realistic transaction data, including transaction amounts, timestamps, and user information. The generated data is then stored in another Amazon S3 bucket for further processing.
-
+![Collect data Diagram](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/451683853078_.pic.jpg)
 3. **Data Processing and Storage:** AWS Glue, a serverless data integration service, is employed to extract, transform, and load (ETL) the collected transaction data from the S3 bucket. The processed data is then transferred to an Amazon RDS database, where it is securely stored and organized for efficient retrieval and analysis.
 ![Glue Job Diagram](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/491683853079_.pic.jpg)
-
+![Star Schema](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/561683853087_.pic.jpg)
 
 4. **Fraud Detection:** A second Lambda function is created to retrieve the processed data from the RDS database and the neural network model from the S3 bucket. This function is responsible for applying the neural network model to the transaction data to detect potential fraud cases. The Lambda function processes the data in real-time, identifying any suspicious activities and flagging them for further investigation.
 
 5. **Results and Reporting:** The fraud detection system generates a comprehensive report that includes the results of the analysis, highlighting any potential fraudulent activities. This report can be used by stakeholders to take appropriate action and mitigate potential risks. Additionally, the system can be configured to send automated email notifications to customers who may be at risk of fraud, informing them of the potential issue and providing guidance on how to proceed.
-
+![Result picture](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/Screen%20Shot%202023-05-11%20at%2011.50.49%20PM.png)
 ## Prerequisites
 
 To successfully set up and run this project, the following prerequisites are required:
