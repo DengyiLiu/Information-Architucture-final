@@ -1,6 +1,6 @@
 # Information-Architucture-final
 # Project: Fraud Detection using Neural Network and AWS Services
-
+### Members: Anub, Dengyi,
 This repository contains the code and resources for an advanced fraud detection system that leverages a trained neural network model and a variety of AWS services. The system employs a data pipeline that collects data from a simulated website, processes it, and stores the processed data in an Amazon RDS database. The neural network model, which is stored in an Amazon S3 bucket, is then applied to this processed data to detect potential fraudulent activities.
 
 ## Detailed Overview
