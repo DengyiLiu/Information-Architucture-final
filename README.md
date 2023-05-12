@@ -12,6 +12,8 @@ The fraud detection system consists of the following key steps:
 2. **Data Collection:** To simulate real-world conditions, an AWS Lambda function is used to generate and collect transaction data from a fictitious website. This Lambda function is responsible for creating realistic transaction data, including transaction amounts, timestamps, and user information. The generated data is then stored in another Amazon S3 bucket for further processing.
 
 3. **Data Processing and Storage:** AWS Glue, a serverless data integration service, is employed to extract, transform, and load (ETL) the collected transaction data from the S3 bucket. The processed data is then transferred to an Amazon RDS database, where it is securely stored and organized for efficient retrieval and analysis.
+![Glue Job Diagram](https://github.com/DengyiLiu/Information-Architucture-final/blob/main/491683853079_.pic.jpg)
+
 
 4. **Fraud Detection:** A second Lambda function is created to retrieve the processed data from the RDS database and the neural network model from the S3 bucket. This function is responsible for applying the neural network model to the transaction data to detect potential fraud cases. The Lambda function processes the data in real-time, identifying any suspicious activities and flagging them for further investigation.
 
